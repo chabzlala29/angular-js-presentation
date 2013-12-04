@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="AngularJS Presentation">
+		<meta name="author" content="Moshe Bergman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section><h1 style="text-align: center;">Angular<span style="color: #f08">JS</span>
+</h1>
+<p>
+<br></p>
+<h2>A Brief Introduction</h2></section><section><img class="standard-avatar" src="http://i.imgur.com/s4lT1NL.jpg"><h2 class="standard-position-absolute" style="top: 250%; color: rgb(255, 255, 255); text-align:left;">Moshe Bergman</h2>
+<p class="standard-position-absolute" style="top: 350%; color: rgb(0, 0, 0); text-align:left;">
+    <a href="https://twitter.com/mbergman">@MosheBergman</a> (First part taken from: <a href="http://slid.es/gsklee/angularjs-a-brief-introduction">Gias Kay Lee</a>)
+</p></section><section><div style="display: inline-block; width: 75%;">
+    <h2 style="text-align: left; ">jQuery.</h2>
+    <p>
+    <br></p>
+    <div class="fragment">
+        <p style="text-align: left;">Once a best friend forever</p>
+        <p>
+        <br></p>
+        <p style="text-align: right;">...until the era of webapps</p>
+    </div>
+</div></section><section><div style="display: inline-block; width: 75%;">
+    <p style="text-align: left; ">It has grown from</p>
+    <p>
+    <br></p>
+    <p style="text-align: left; ">a handy DOM manipulation tool...</p>
+    <p>
+    <br></p>
+    <div class="fragment">
+        <p style="text-align: right; ">to an all-in-one juggernaut</p>
+        <p>
+        <br></p>
+        <p style="text-align: right; ">without much forethoughts</p>
+    </div>
+</div></section><section><h2>jQuery + Webapp = Headaches</h2>
+<p>
+<br></p>
+<p>
+</p>
+<ul class="fragment" data-fragment-index="0">
+<li>
+        <span style="text-align: center;">Structureless spaghetti code</span>
+    </li>
+    <br><li>
+        <span style="text-align: center;">Selectors creating tight coupling</span>
+    </li>
+    <br><li>
+        <span style="text-align: center;">Not enough high level abstractions</span>
+    </li>
+</ul>
+</section>
+<section>
+	<h1 style="text-align: center;">Angular<span style="color: #f08">JS</span>
+</h1>
+<p>
+<br></p>
+<p class="fragment">Here to save your day</p></section><section><p style="text-align: center;">What the * is</p>
+<h2>Angular<span style="color: #f08">JS</span>
+</h2>
+<p>and why should I use it, exactly?</p></section><section data-background-color="rgba( 180, 50, 140, 0.6 )"><h2>It's</h2>
+<h1 style="color: rgb(255, 170, 0);">FAST</h1>
+<p class="fragment" data-fragment-index="0">(Once you two become good buddies)</p></section><section data-background-color="rgba( 255, 122, 0, 0.6 )"><h2>It brings</h2>
+<h1 style="color: rgb(255, 234, 64);">QUALITY</h1>
+<p class="fragment" data-fragment-index="0">(Both in terms of code structure and robustness)</p></section><section data-background-color="rgba( 50, 200, 90, 0.4 )"><h2>It's</h2>
+<h1 style="color: rgb(152, 242, 61);">FREE</h1>
+<p class="fragment" data-fragment-index="0">(w00t!)</p></section><section><h1 style="text-align: center; font-weight: bold;">Angular<span style="color: rgb(255, 0, 136);">JS</span>
+</h1>
+<p>
+<br></p>
+<p>
+<br></p>
+<p style="font-weight: bold;">puts a heavy emphasis on</p>
+<h2 style="font-weight: bold; color: rgb(255, 170, 0);">Separation of Concerns</h2></section><section><div style="background-color: rgb(194, 51, 101); width: 200%; height: 1500px; position: absolute; top: -100%; left: -50%; z-index: -3;">
+</div>
+<div style="background-color: rgb(88, 130, 186); width: 200%; height: 500%; position: absolute; top: 1050%; left: 70%; z-index: -2;">
+</div>
+<div style="background-color: rgb(124, 196, 51); width: 100%; height: 500%; position: absolute; top: 650%; left: -64%; z-index: -1;">
+</div>
+<div>
+    <h1 style="font-weight: bold; position: absolute; left: 0px; top: 700%;">HTML</h1>
+    <p style="font-weight: bold; position: absolute; left: 0.5%; top: 1000%; color: rgb(17, 17, 17);">STRUCTURE</p>
+    <h1 style="font-weight: bold; position: absolute; right: 0px; top: 300%;">JS</h1>
+    <p style="font-weight: bold; position: absolute; right: 0px; top: 150%; color: rgb(17, 17, 17);">BEHAVIOR</p>
+    <h1 style="font-weight: bold; position: absolute; right: 0px; top: 1100%;">CSS</h1>
+    <p style="font-weight: bold; position: absolute; right: 0px; top: 1400%; color: rgb(17, 17, 17);">PRESENTATION</p>
+    <p style="font-weight: bold; position: absolute; left: 0px; top: 1600%; color: rgb(255, 239, 112);">The Eval JavaScript Empire</p>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="background-color: rgb(194, 51, 101); width: 200%; height: 1500px; position: absolute; top: -100%; left: 0%; z-index: 1;">
+    </div>
+    <div style="background-color: rgb(88, 130, 186); width: 200%; height: 1500px; position: absolute; top: 875%; left: 0%; z-index: 2;">
+    </div>
+    <div class="visual-diagram" style="background-color: rgb(124, 196, 51); width: 100%; height: 1500px; position: absolute; top: -525%; left: -75%; z-index: 3;">
+    </div>
+    <h1 style="z-index: 4; font-weight: bold; position: absolute; left: 0px; top: 700%;">HTML</h1>
+    <p style="z-index: 4; font-weight: bold; position: absolute; left: 0.5%; top: 1000%; color: rgb(17, 17, 17);">INTERFACE</p>
+    <h1 style="z-index: 4; font-weight: bold; position: absolute; right: 0px; top: 300%;">JS</h1>
+    <p style="z-index: 4; font-weight: bold; position: absolute; right: 0px; top: 150%; color: rgb(17, 17, 17);">LOGIC</p>
+    <h1 style="z-index: 4; font-weight: bold; position: absolute; right: 0px; top: 1100%;">CSS</h1>
+    <p style="z-index: 4; font-weight: bold; position: absolute; right: 0px; top: 1400%; color: rgb(17, 17, 17);">PRESENTATION</p>
+    <p style="z-index: 4; font-weight: bold; position: absolute; left: 0px; top: 1600%; color: rgb(255, 239, 112);">The New Angular Republic</p>
+</div></section><section><div style="display: inline-block;">
+    <h2 style="text-align: left; ">Angular<span style="color: #f08">JS</span>
+</h2>
+    <p>returns things to where they belong</p>
+    <p style="text-align: right; ">in their natural forms</p>
+</div>
+<p>
+<br></p>
+<ul>
+<li class="fragment">
+        <span style="text-align: center;">HTML? Build UI Declaratively!</span>
+    </li>
+    <br><li class="fragment">
+        <span style="text-align: center;">CSS? Animations!</span>
+    </li>
+    <br><li class="fragment">
+        <span style="text-align: center;">JavaScript? Use it the plain old way!</span>
+    </li>
+</ul></section><section><div style="display: inline-block;">
+    <p style="text-align: left; ">Intriguingly,</p>
+    <p>the uprising of AngularJS in 2013</p>
+    <p style="text-align: right; ">is coincident with...</p>
+</div>
+<p>
+<br></p>
+<ul>
+<li class="fragment">
+        <span style="text-align: center;">The Extensible Web Movement</span>
+    </li>
+    <br><li class="fragment">
+        <span style="text-align: center;">Increasing Visibility in Web Components</span>
+    </li>
+    <br><li class="fragment">
+        <span style="text-align: center;">The Release of Polymer</span>
+    </li>
+</ul></section><section><p>It's believed that,</p>
+<img src="http://www.technobuffalo.com/wp-content/uploads/2013/08/chrome.png"><p>this company is responsible for everything</p></section><section><div style="display: inline-block;">
+    <p style="text-align: left; ">But this time</p>
+    <p>they seem to be getting things done right</p>
+</div></section>
+			<section>
+				<h2 style="text-align: center; font-weight: bold;">The App</span></h2>
+				<p style="text-align: left;">
+					To get started:
+					<pre><code data-trim style="white-space: pre-line;">
+						<div ng-app="app">
+						  <div ng-view></div>
+						</div>
+					</code></pre>
+        </p>
+				<p>
+  				<ul>
+  					<li class="fragment"> Setup the app </li>
+  					<li class="fragment"> And define the views </li>
+  				</ul>
+        </p>
+			</section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Module Definition</span></h2>
+        <pre><code data-trim style="">
+angular.module('app', ['app.services', 'app.directives', 'app.controllers', 
+  'ngRoute']).config(function($routeProvider, $locationProvider) {
+    $routeProvider.when("/accounts/?:userIdOrScreenName?", {
+      templateUrl: "/accounts/partials/main_page",
+      controller: 'UserDetailsIndexCtrl'
+    });
+    $routeProvider.otherwise({
+      redirectTo: "/accounts/"
+    });
+    $('.navbar').removeClass('navbar-inverse');
+    return $locationProvider.html5Mode(true);
+  });
+        </code></pre>
+        <p>
+          <ul>
+            <li class="fragment"> Modules encapsulate the app code into a namespace </li>
+            <li class="fragment"> Dependency inject dependencies, by variable name. </li>
+            <li class="fragment"> No Global Variables </li>
+            <li class="fragment"> Routing logic, controller per route, Templates </li>
+            <li class="fragment"> Templates are not limited by mustache :)) </li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Controllers</span></h2>
+        <pre><code>
+angular.module('app.controllers', ['app.services']).controller('UserDetailsIndexCtrl', 
+  function($scope, userQuery, $location, $routeParams) {
+    var onUserDataArrived = function(result) {
+      $scope.user = {id: result.data.id, name: result.data.profile.name, screen_name: result.data.profile.screen_name, image: result.data.profile.profile_image_urls.normal.http_url};
+    }
+    if ($routeParams.userIdOrScreenName) {
+      $scope.userIdOrAccount = $routeParams.userIdOrScreenName;
+      userQuery.queryUser($routeParams.userIdOrScreenName).then(onUserDataArrived);
+    }
+    $scope.onSelectUser = function(e) {
+      $location.path('/accounts/' + $scope.userIdOrAccount);
+    };
+}
+        </code></pre>
+        <ul>
+          <li class="fragment"> Controllers only prepare the model for the view and respond to events </li>
+          <li class="fragment"> Controllers do NOT manipulate the DOM </li>
+          <li class="fragment"> The $scope variable is where the view consumes variables from </li>
+          <li class="fragment"> Event handlers </li>
+          <li class="fragment"> Controllers are re-created on every request </li>
+        </ul>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Scopes are hierarchical</span></h2>
+        <br/><br/>
+        <ul>
+          <li class="fragment"> There is only one $rootScope and every scope inherits from it. </li>
+          <li class="fragment"> Some AngularJS constructs create a new scope, that inherit from the controller's $scope.</li>
+          <li class="fragment"> Some AngularJS constructs create a new scope, that inherit from the controller's $scope.</li>
+        </ul>
+        <br/><br/>
+        <div class="read_more">
+          <a href="http://docs.angularjs.org/guide/scope">Read More</a>
+        </div>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Views &amp; Binding</span></h2>
+        <pre><code>
+<form ng-submit="onSelectUser()">
+  <input type="text" ng-model="userIdOrAccount" placeholder="User ID or @SN"/>
+</form>
+<span class="name">{{user.name}}</span>
+        </code></pre>
+        <ul>
+          <li class="fragment"> Custom attribute names </li>
+          <li class="fragment"> Custom element names </li>
+          <li class="fragment"> Data binding ({{}} and ng-model)</li>
+          <li class="fragment"> Some attributes/elements also change HTML, such as: ng-repeat </li>
+        </ul>
+        <div class="read_more">
+          <a href="http://docs.angularjs.org/tutorial/step_04">Read More</a>
+        </div>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Services</span></h2>
+        <ul>
+          <li class="fragment"> Promises $q </li> 
+          <li class="fragment"> $http </li>
+        </ul>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Advanced Topics</span></h2>
+        Play with the basics before diving into the advanced. Get comfortable with them.
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Directives &amp; Filters</span></h2>
+        Are really confusing at first
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Testing</span></h2>
+      </section>
+		</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
