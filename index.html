@@ -173,6 +173,16 @@
     <p style="text-align: left; ">But this time</p>
     <p>they seem to be getting things done right</p>
 </div></section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">What we'll cover</span></h2>
+        <ul>
+          <li class="fragment"> Setup the app </li>
+          <li class="fragment"> Controllers, Scopes, View binding </li>
+          <li class="fragment"> Services </li>
+          <li class="fragment"> Directives &amp; Filters </li>
+          <li class="fragment"> Testing </li>
+        </li>
+      </section>
 			<section>
 				<h2 style="text-align: center; font-weight: bold;">The App</span></h2>
 				<p style="text-align: left;">
@@ -247,7 +257,8 @@ angular.module('app.controllers', ['app.services']).controller('UserDetailsIndex
         <ul>
           <li class="fragment"> There is only one $rootScope and every scope inherits from it. </li>
           <li class="fragment"> Some AngularJS constructs create a new scope, that inherit from the controller's $scope.</li>
-          <li class="fragment"> Some AngularJS constructs create a new scope, that inherit from the controller's $scope.</li>
+          <li class="fragment"> Scope is a regular POJO. Your models are regular Javascript objects</li>
+          <li class="fragment"> All AngularJS specific variables and functions start with $ to not get serialized</li>
         </ul>
         <br/><br/>
         <div class="read_more">
@@ -274,9 +285,20 @@ angular.module('app.controllers', ['app.services']).controller('UserDetailsIndex
       </section>
       <section>
         <h2 style="text-align: center; font-weight: bold;">Services</span></h2>
+        <pre><code>
+angular.module('app.services', []).factory('userQuery', function($http, $q) {
+  return {
+    queryUser: function(userIdOrScreenName) {
+      return $http.get('/accounts/user_stats/' + userIdOrScreenName.toString());
+    }
+  };
+});
+        </code></pre>
         <ul>
-          <li class="fragment"> Promises $q </li> 
-          <li class="fragment"> $http </li>
+          <li class="fragment"> Services are where the http get/post/put/delete calls go </li>
+          <li class="fragment"> Services are created using factory, since they have only one instance </li>
+          <li class="fragment"> Promises $q - are Angular library like jQuery Deferred </li> 
+          <li class="fragment"> $http.get is almost equivalent to $.get</li>
         </ul>
       </section>
       <section>
@@ -285,10 +307,63 @@ angular.module('app.controllers', ['app.services']).controller('UserDetailsIndex
       </section>
       <section>
         <h2 style="text-align: center; font-weight: bold;">Directives &amp; Filters</span></h2>
-        Are really confusing at first
+        <p>
+          Directives are really confusing at first.
+        </p>
+        <h3>Simple directive:</h3>
+
+        <h3>Filters:</h3>
+        <pre><code>
+&lt;tr ng-repeat="friend in friends | filter:searchText">
+&lt;/tr>
+<span>{{amount | currency}}</span>
+        </code></pre>
       </section>
       <section>
         <h2 style="text-align: center; font-weight: bold;">Testing</span></h2>
+      <pre><code>
+describe('app.controllers::UserDetailsIndexCtrl', function() {
+  var $controller, $location, $scope, userQuery, $q, deferred;
+  beforeEach(module('app.controllers'));
+  beforeEach(inject(function($rootScope, _$location_, _$controller_, _$q_) {
+    $scope = $rootScope.$new();
+    $location = _$location_;
+    return userQuery = {
+      queryUser: function() {
+        deferred = $q.defer();
+        return deferred.promise;
+      }
+    };
+  }));
+      </code></pre>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Testing</span></h2>
+        <pre></code>
+it('should query user information when submitted with /userid=1', function() {
+    spyOn(userQuery, 'queryUser').andCallThrough();
+    $controller('UserDetailsIndexCtrl', {
+      $scope: $scope,
+      $location: $location,
+      $routeParams: {
+        userIdOrScreenName: 3
+      },
+      userQuery: userQuery
+    });
+    expect(userQuery.queryUser).toHaveBeenCalled();
+  });
+});
+        </pre></code>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Testing</span></h2>
+        <ul>
+          <li>Testing is best done using Jasmine and run by NodeJS and Karma.</li>
+          <li>Karma live monitors your files and runs tests!</li>
+        </li>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Thank You</span></h2>
       </section>
 		</div>
 
