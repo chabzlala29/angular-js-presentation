@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>AngularJS Introduction</title>
 
 		<meta name="description" content="AngularJS Presentation">
 		<meta name="author" content="Moshe Bergman">
@@ -40,64 +40,45 @@
 </h1>
 <p>
 <br></p>
-<h2>A Brief Introduction</h2></section><section><img class="standard-avatar" src="http://i.imgur.com/s4lT1NL.jpg"><h2 class="standard-position-absolute" style="top: 250%; color: rgb(255, 255, 255); text-align:left;">Moshe Bergman</h2>
-<p class="standard-position-absolute" style="top: 350%; color: rgb(0, 0, 0); text-align:left;">
-    <a href="https://twitter.com/mbergman">@MosheBergman</a> (First part taken from: <a href="http://slid.es/gsklee/angularjs-a-brief-introduction">Gias Kay Lee</a>)
-</p></section><section><div style="display: inline-block; width: 75%;">
-    <h2 style="text-align: left; ">jQuery.</h2>
-    <p>
-    <br></p>
-    <div class="fragment">
-        <p style="text-align: left;">Once a best friend forever</p>
-        <p>
-        <br></p>
-        <p style="text-align: right;">...until the era of webapps</p>
-    </div>
-</div></section><section><div style="display: inline-block; width: 75%;">
-    <p style="text-align: left; ">It has grown from</p>
-    <p>
-    <br></p>
-    <p style="text-align: left; ">a handy DOM manipulation tool...</p>
-    <p>
-    <br></p>
-    <div class="fragment">
-        <p style="text-align: right; ">to an all-in-one juggernaut</p>
-        <p>
-        <br></p>
-        <p style="text-align: right; ">without much forethoughts</p>
-    </div>
-</div></section><section><h2>jQuery + Webapp = Headaches</h2>
-<p>
-<br></p>
-<p>
+<h2>A Brief Introduction</h2>
+<p class="standard-position-absolute" style="top: 350%; color: rgb(100, 100, 100); text-align:left;">
+  by Moshe Bergman
 </p>
-<ul class="fragment" data-fragment-index="0">
-<li>
-        <span style="text-align: center;">Structureless spaghetti code</span>
-    </li>
-    <br><li>
-        <span style="text-align: center;">Selectors creating tight coupling</span>
-    </li>
-    <br><li>
-        <span style="text-align: center;">Not enough high level abstractions</span>
-    </li>
-</ul>
 </section>
 <section>
-	<h1 style="text-align: center;">Angular<span style="color: #f08">JS</span>
-</h1>
-<p>
-<br></p>
-<p class="fragment">Here to save your day</p></section><section><p style="text-align: center;">What the * is</p>
-<h2>Angular<span style="color: #f08">JS</span>
-</h2>
-<p>and why should I use it, exactly?</p></section><section data-background-color="rgba( 180, 50, 140, 0.6 )"><h2>It's</h2>
+  <h2 style="text-align: center; font-weight: bold;">What we'll cover</span></h2>
+  <ul>
+    <li class="fragment"> Setup the app </li>
+    <li class="fragment"> Controllers, Scopes, View binding </li>
+    <li class="fragment"> Services </li>
+    <li class="fragment"> Directives &amp; Filters </li>
+    <li class="fragment"> Testing </li>
+  </ul>
+</section>
+<section>
+  <h2 style="text-align: center; font-weight: bold;">JQuery</span></h2>
+  <ul>
+    <li class="fragment"> Simple API and works great </li>
+    <li class="fragment"> Tightly couples AJAX calls, DOM Manipulation and event listening in the app code </li>
+    <li class="fragment"> Does not provide structure recommendation </li>
+    <li class="fragment"> Does not provide two way binding </li>
+  </ul>
+</section>
+<section>
+  <h2 style="text-align: center; font-weight: bold;">Backbone.js / Handlebars</span></h2>
+  <ul>
+    <li class="fragment"> Provide some structure and binding </li>
+    <li class="fragment"> Re-renders the whole DOM on every change </li>
+    <li class="fragment"> Does not provide two way binding </li>
+  </ul>
+</section>
+<section data-background-color="rgba( 180, 50, 140, 0.6 )"><h2>It's</h2>
 <h1 style="color: rgb(255, 170, 0);">FAST</h1>
-<p class="fragment" data-fragment-index="0">(Once you two become good buddies)</p></section><section data-background-color="rgba( 255, 122, 0, 0.6 )"><h2>It brings</h2>
+<p class="fragment" data-fragment-index="0">(Except for large amount of bindings)</p></section><section data-background-color="rgba( 255, 122, 0, 0.6 )"><h2>It brings</h2>
 <h1 style="color: rgb(255, 234, 64);">QUALITY</h1>
 <p class="fragment" data-fragment-index="0">(Both in terms of code structure and robustness)</p></section><section data-background-color="rgba( 50, 200, 90, 0.4 )"><h2>It's</h2>
 <h1 style="color: rgb(152, 242, 61);">FREE</h1>
-<p class="fragment" data-fragment-index="0">(w00t!)</p></section><section><h1 style="text-align: center; font-weight: bold;">Angular<span style="color: rgb(255, 0, 136);">JS</span>
+</section><section><h1 style="text-align: center; font-weight: bold;">Angular<span style="color: rgb(255, 0, 136);">JS</span>
 </h1>
 <p>
 <br></p>
@@ -168,11 +149,8 @@
     <br><li class="fragment">
         <span style="text-align: center;">The Release of Polymer</span>
     </li>
-</ul></section><section><p>It's believed that,</p>
-<img src="http://www.technobuffalo.com/wp-content/uploads/2013/08/chrome.png"><p>this company is responsible for everything</p></section><section><div style="display: inline-block;">
-    <p style="text-align: left; ">But this time</p>
-    <p>they seem to be getting things done right</p>
-</div></section>
+</ul>
+</section>
       <section>
         <h2 style="text-align: center; font-weight: bold;">What we'll cover</span></h2>
         <ul>
@@ -181,7 +159,7 @@
           <li class="fragment"> Services </li>
           <li class="fragment"> Directives &amp; Filters </li>
           <li class="fragment"> Testing </li>
-        </li>
+        </ul>
       </section>
 			<section>
 				<h2 style="text-align: center; font-weight: bold;">The App</span></h2>
@@ -196,7 +174,7 @@
 				<p>
   				<ul>
   					<li class="fragment"> Setup the app </li>
-  					<li class="fragment"> And define the views </li>
+  					<li class="fragment"> Define container for view templates </li>
   				</ul>
         </p>
 			</section>
@@ -303,16 +281,50 @@ angular.module('app.services', []).factory('userQuery', function($http, $q) {
       </section>
       <section>
         <h2 style="text-align: center; font-weight: bold;">Advanced Topics</span></h2>
-        Play with the basics before diving into the advanced. Get comfortable with them.
+        To try after mastering the basics
       </section>
       <section>
-        <h2 style="text-align: center; font-weight: bold;">Directives &amp; Filters</span></h2>
+        <h2 style="text-align: center; font-weight: bold;">Directives</span></h2>
         <p>
-          Directives are really confusing at first.
+          Directives can be confusing at first. <br/>
+          Many ways to construct them.
+          <ul>
+            <li>They encapsulate an element with related logic</li>
+            <li>They encauslate 3rd party components</li>
+          </ul>  
         </p>
-        <h3>Simple directive:</h3>
-
-        <h3>Filters:</h3>
+          <pre><code>
+directive('ngConfirmClick', function() {
+  return {
+    link: function (scope, element, attr) {
+      var msg = attr.ngConfirmClick || "Are you sure?";
+      var clickAction = attr.confirmedClick;
+      element.bind('click',function (event) {
+          if ( window.confirm(msg) ) {
+              scope.$eval(clickAction)
+          }
+      });
+    }
+  };
+})
+        </code></pre>
+      </section>
+      <section>
+        <h2 style="text-align: center; font-weight: bold;">Filters</span></h2>
+        <p>
+          Used for transforming data (pipe). <br/>
+          <ul>
+            <li>They encapsulate an element with related logic</li>
+            <li>They encauslate 3rd party components</li>
+          </ul>  
+        </p>
+        <pre><code>
+.filter('multiple', function () {
+   return function (input) {
+       return '' + input + 'X';
+   };
+})
+        </code></pre>
         <pre><code>
 &lt;tr ng-repeat="friend in friends | filter:searchText">
 &lt;/tr>
